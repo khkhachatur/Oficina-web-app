@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+
+
+@theme {
+  --color-gray-900: #050505;
+  --color-gray-800: #141414;
+  --color-gray-700: #212328;
+  --color-gray-600: #30333A;
+  --color-gray-500: #9095A1;
+  --color-gray-400: #CCDADC;
+
+
+  --color-yellow-400: #FDD458;
+  --color-yellow-500: #E8BA40;
+
+}
+
+body {
+  @apply bg-gray-900 ;
+}
+
+@layer utilities {
+  .container {
+    @apply mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8;
+  }
+  .yellow-btn {
+    @apply h-12 cursor-pointer bg-gradient-to-b from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-400 text-gray-950 font-medium text-base rounded-lg shadow-lg disabled:opacity-50;
+  }
+  .header {
+    @apply z-50 w-full h-[70px] bg-gray-800;
+  }
+  .header-wrapper {
+    @apply flex justify-between items-center py-4 px-7 text-gray-500;
+  }
+}
