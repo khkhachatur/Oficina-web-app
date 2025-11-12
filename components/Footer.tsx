@@ -1,4 +1,4 @@
-import { SOCIAL_MEDIA } from "@/lib/constants"
+import { SERVICES, SOCIAL_MEDIA } from "@/lib/constants"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -19,7 +19,11 @@ const Footer = () => {
         </ul>
             {/* <div className="border-gray-600 border-1 opacity-50"/> */}
         <div className="flex justify-between">
-            {}
+            {SERVICES.map(({name})=>(
+                <ul key={name}>
+                    <li >{name}</li>
+                </ul>
+            ))}
         </div>
     </footer>
   )
