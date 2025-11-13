@@ -1,8 +1,8 @@
 export const NAV_ITEMS = [
-    {href: "/about", label:"About"},
-    {href: "/services", label:"Services"},
+    {href: "#about", label:"About"},
+    {href: "#services", label:"Services"},
     {href: "/calendar", label:"Calendar"},
-    {href: "/contacts", label:"Contacts"},
+    {href: "#contacts", label:"Contacts"},
     // {href: "", label:""},
 ]
 
@@ -14,13 +14,13 @@ export const SOCIAL_MEDIA = [
 ]
 
 export const SERVICES = [ 
-    {name:'Car Wash', description:''},
-    {name:'Technical Diagnostic', description:''},
-    {name:'Electronic Diagnostic', description:''},
-    {name:'Maintenance', description:''},
-    {name:'Auto Paint', description:''},
-    {name:'Any Type Car Reparations', description:''},
-    {name:'Polish', description:''},
-    {name:'Detailing', description:''},
+    {href: "#services", name:'Car Wash', description:''},
+    {href: "#services", name:'Technical Diagnostic', description:''},
+    {href: "#services", name:'Electronic Diagnostic', description:''},
+    {href: "#services", name:'Maintenance', description:''},
+    {href: "#services", name:'Auto Paint', description:''},
+    {href: "#services", name:'Any Type Car Reparations', description:''},
+    {href: "#services", name:'Polish', description:''},
+    {href: "#services", name:'Detailing', description:''},
     // {name:'', description:''},
 ]

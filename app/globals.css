@@ -25,7 +25,7 @@ body {
     @apply mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8;
   }
   .sections{
-    @apply flex flex-col items-center my-20
+    @apply flex flex-col items-center justify-center my-20
   }
   .hero-bg{
     @apply top-0 object-cover brightness-75
