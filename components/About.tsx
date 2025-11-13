@@ -3,7 +3,7 @@ import Image
  from "next/image"
 const About = () => {
   return (
-    <div className="container sections items-center text-center gap-5 w-[55vw]">
+    <div className="container sections items-center text-center gap-5 w-[55vw]" id='about'>
         <Title title='About Us'/>
         <p className="text-gray-500 text-xl ">
             At <span className="text-yellow-500 font-semibold">Oficina Número 1</span>, we combine{" "}
