@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { SOCIAL_MEDIA } from "@/lib/constants"
+import { SOCIAL_MEDIA } from "@/src/lib/constants"
 import Link from "next/link"
 
 const Socials = () => {

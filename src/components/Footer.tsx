@@ -1,4 +1,4 @@
-import { NAV_ITEMS, SERVICES, SOCIAL_MEDIA } from "@/lib/constants"
+import { NAV_ITEMS, SERVICES, SOCIAL_MEDIA } from "@/src/lib/constants"
 import Image from "next/image"
 import Link from "next/link"
 

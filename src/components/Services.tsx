@@ -39,11 +39,9 @@ useEffect(() => {
 
   return (
     <div className="container sections" id="services">
-      <Title title="Services" />
-
+        <Title title="Services" />
       <ul className="nav-services responsive relative w-full h-[70vh] my-20 mb-60 overflow-visible">
         
-
         <li className="absolute inset-0 flex justify-center items-center car-frame" data-step="dirty">
           <Image
             src="/images/911-dirty.png"
