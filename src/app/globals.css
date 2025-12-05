@@ -20,6 +20,17 @@ body {
   @apply bg-gray-800 ;
 }
 
+input, textarea, select {
+  background: #1a1a1a ;
+  border-color: #333 ;
+  color: white ;
+}
+.form-label {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+
 @layer utilities {
   .container {
     @apply mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8;
@@ -54,6 +65,10 @@ body {
   .header-wrapper {
     @apply flex justify-between items-center py-4 px-7 text-gray-500;
   }
+  .form-label {
+    @apply text-gray-500;
+  }
+  
 }
 
 @theme inline {
