@@ -22,5 +22,19 @@ export const SERVICES = [
     {href: "#services", name:'Any Type Car Reparations', description:''},
     {href: "#services", name:'Polish', description:''},
     {href: "#services", name:'Detailing', description:''},
-    // {name:'', description:''},
+    // {href: "", name:'', description:''},
+
+]
+
+export const CAR_TYPES = [ 
+    {value: "Sedan", name:"Sedan"},
+    {value: "LuxurySedan", name:"Luxury Sedan"},
+    {value: "SUV", name:"SUV"},
+    {value: "LuxurySUV", name:"Luxury SUV"},
+    {value: "BigSUV", name:"Big SUV"},
+    {value: "LuxuryBigSUV", name:"Luxury Big SUV"},
+    {value: "Truck", name:"Truck"},
+    {value: "Pickup", name:"Pickup"},
+    // {value: "#", name:''},
+
 ]
