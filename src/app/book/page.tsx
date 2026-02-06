@@ -6,6 +6,8 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import { CAR_TYPES } from "@/src/lib/constants";
+import { CheckCircle } from "lucide-react";
+
 
 
 import {
@@ -35,10 +37,7 @@ const BookingSchema = z.object({
     email: z.string().email("Invalid email"),
     type: z.string().min(1, "Select a type"),
     brand: z.string().min(2, "Brand / Model required"),
-    vin: z
-  .string()
-  .length(17, "VIN must be exactly 17 characters")
-  .regex(/^[A-HJ-NPR-Z0-9]+$/, "VIN must be alphanumeric (no I, O, Q)"),
+    vin: z.string().trim().length(17, "VIN must be exactly 17 characters").regex(/^[A-HJ-NPR-Z0-9]+$/, "VIN must be alphanumeric (no I, O, Q)"),
     date: z.string().min(1, "Choose a date"),
     time: z.string().min(1, "Select a time"),
     description: z.string().min(5, "Description required"),
@@ -67,10 +66,16 @@ export default function BookPage() {
     
     const [showEmailHint, setShowEmailHint] = useState(false);
     
-    const onSubmit = (values: any) => {
-        console.log("Submitted:", values);
-        setShowEmailHint(true);
-        alert("Your request has been submitted!");
+    const onSubmit = async (values: any) => {
+        const res = await fetch("/api/book", {
+          method: "POST",
+          body: JSON.stringify(values),
+        });
+      
+        if (res.ok) {
+          setShowEmailHint(true);
+          alert("Your request has been submitted!");
+        }
       };
 
   return (
@@ -174,17 +179,26 @@ export default function BookPage() {
             />
 
             <FormField
-              control={form.control}
-              name="vin"
-              render={({ field }) => (
+            control={form.control}
+            name="vin"
+            render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="form-label">VIN Number <span className="text-yellow-500">*</span></FormLabel>
-                  <FormControl>
-                    <Input placeholder="17-character code" {...field} />
-                  </FormControl>
-                  <FormMessage />
+                <FormLabel className="form-label">
+                    VIN Number <span className="text-yellow-500">*</span>
+                </FormLabel>
+                <FormControl>
+                    <Input
+                    {...field}
+                    value={field.value ?? ""}
+                    onChange={(e) => {
+                        const upper = e.target.value.toUpperCase();
+                        field.onChange(upper);      // update field value
+                    }}
+                    />
+                </FormControl>
+                <FormMessage />
                 </FormItem>
-              )}
+            )}
             />
 
             <FormField
